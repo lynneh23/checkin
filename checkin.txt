@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contractor Check-in</title>
+</head>
+<body>
+  <h1>Contractor Check-in</h1>
+  <form id="checkinForm">
+    <input type="checkbox" id="arrived" name="arrived">
+    <label for="arrived">I have arrived at the client's house</label>
+    <br><br>
+    <button type="submit">Submit</button>
+  </form>
+  <script>
+    document.getElementById("checkinForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      if (document.getElementById("arrived").checked) {
+        alert("Thank you for checking in!");
+        // You can replace the alert with any other action you want to perform after checking in
+      } else {
+        alert("Please check the box before submitting.");
+      }
+    });
+  </script>
+</body>
+</html>
